@@ -24,7 +24,7 @@ public class Deck {
 			for (int valueLoop = 1; valueLoop < 14; valueLoop++) {
 				for (int suitLoop = 1; suitLoop < 5; suitLoop++) {
 					Card newCard = new Card(suitLoop, valueLoop, deckLoop);
-					myDeck.add(newCard);
+					myDeck.push(newCard);
 				}
 			}
 		}
@@ -69,8 +69,9 @@ public class Deck {
 		    }
 		
 	}
-    //Check if burn card was reached
-	public Boolean BurnCardReached() {
+    
+	//Check if burn card was reached
+	public Boolean ShuffleCardReached() {
 
 		return true;
 	}

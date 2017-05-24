@@ -30,9 +30,22 @@ public class Hand {
 			cardValues[cardNumber] = value;
 			this.cardNumber++;
 			this.total += value;
+			this.aceTotal += value;
 		}	
 	}
 
+	public int GetHandValue(){
+		if (aceCount == 0){
+			return total;
+		}
+		else {
+				if((total + 10 > 21)){
+					return total;
+			}
+				else return (total + 10);
+		}	
+	}
+	
 	// Print out hand total score
 	public void PrintHand(boolean hidden) {
 		if (!hidden) {
